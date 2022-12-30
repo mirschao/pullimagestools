@@ -36,7 +36,7 @@ jobs:
         run: |
           docker login --username=${{ secrets.ALIYUNUSERNAME }} --password=${{ secrets.ALIYUNPASSWORD }} registry.cn-beijing.aliyuncs.com
           docker push registry.cn-beijing.aliyuncs.com/gcrios/metrics-server:kube-webhook-certgen
-          docekr push registry.cn-beijing.aliyuncs.com/gcrios/metrics-server:controller
+          docker push registry.cn-beijing.aliyuncs.com/gcrios/metrics-server:controller
       - name: push completions.
         run: |
           echo "Push Image Completion!!!"
