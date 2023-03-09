@@ -32,6 +32,7 @@ jobs:
           docker pull registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143
           docker tag registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20220916-gd32f8c343@sha256:39c5b2e3310dc4264d638ad28d9d1d96c4cbb2b2dcfb52368fe4e3c63f61e10f registry.cn-beijing.aliyuncs.com/gcrios/metrics-server:kube-webhook-certgen
           docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143 registry.cn-beijing.aliyuncs.com/gcrios/metrics-server:controller
+          docker pull redis:6.2.7
       - name: LoadAliyun Image Service & Push images.
         run: |
           docker login --username=${{ secrets.ALIYUNUSERNAME }} --password=${{ secrets.ALIYUNPASSWORD }} registry.cn-beijing.aliyuncs.com
